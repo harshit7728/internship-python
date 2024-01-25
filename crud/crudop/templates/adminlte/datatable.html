@@ -1,0 +1,28 @@
+{% extends "adminlte/base.html" %}
+{% load static %}
+
+
+
+{% block body %}
+
+<table id="myTable" class="display table table-bordered">
+    <thead>
+        <tr>
+                   <th scope="col">ID</th>
+                    <th scope="col">Student Name</th>
+                    <th scope="col">Student Email</th>
+
+        </tr>
+    </thead>
+    <tbody>
+    {% for student in students %}
+     <tr>
+                        <th>{{student.id}}</th>
+                        <td>{{student.name}}</td>
+                        <td>{{student.email}}</td>
+      </tr>
+     {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
